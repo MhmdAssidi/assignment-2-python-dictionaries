@@ -14,11 +14,6 @@ def mergedFunction(dict1,dict2):
     return mergedDict
 
 
-
-
-
-
-
 dict1 = {
     "a": 1,
     "b": 2,
@@ -28,3 +23,19 @@ dict2 = {
     "d": 4
     }
 print(mergedFunction(dict1,dict2))
+
+sentence=input("enter a sentence to print how many times each word repeated: ")
+words =sentence.split()
+# print(words)
+count=0
+wordAppearDict={}
+for word in words:
+    for w in words:
+        if word==w:
+            count=count+1
+    wordAppearDict[word]=count
+    count=0
+print (wordAppearDict)            
+
+
+
