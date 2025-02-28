@@ -12,6 +12,14 @@
 #             mergedDict[j]=dict2[j]
 
 #     return mergedDict
+def totNumEmp(dict):
+    count=0
+    for i in dict.values():
+        for j in i:
+            count+=1
+    return count        
+
+
 
 
 # dict1 = {
@@ -50,6 +58,11 @@ company_employees = {
 #a:
 print(company_employees)
 
+print("before adding david the number of employees in all the company is: ",totNumEmp(company_employees))
+
 company_employees["Engineering"]["David"]={"age":27,"role":"Data Scientist"}
+
 print("after adding the employee David, the dictionary is: ",company_employees)
+
+print("after adding david the number of employees in all the company is: ",totNumEmp(company_employees))
 
